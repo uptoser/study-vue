@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>文档标题</title>
+</head>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+<body>
+  <!-- 数据绑定 -->
+  <div id="app">
+    {{ message }}
+  </div>
+  <!-- 数据绑定 -->
+  <div id="app-2">
+    <span v-bind:title="message">
+      鼠标悬停几秒钟查看此处动态绑定的提示信息！
+    </span>
+  </div>
+  <!-- 条件语句 -->
+  <div id="app-3">
+    <p v-if="seen">现在你看到我了</p>
+  </div>
+  <!-- 循环语句 -->
+  <div id="app-4">
+    <ol>
+      <li v-for="todo in todos">{{todo.text}}</li>
+    </ol>
+  </div>
+  <!-- 单击绑定 -->
+  <div id="app-5">
+    <p>{{message}}</p>
+    <button v-on:click="reverseMessage">逆转消息</button>
+  </div>
+  <!-- 表单绑定 -->
+  <div id="app-6">
+    <p>{{message}}</p>
+    <input type="text" v-model="message">
+  </div>
+
+</body>
+<script src="base.js"></script>
+</html>
